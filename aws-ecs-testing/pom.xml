@@ -12,6 +12,7 @@
 	<groupId>com.saanvisoft</groupId>
 	<artifactId>aws-ecs-testing</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
+	<packaging>jar</packaging>	
 	<name>aws-ecs-testing</name>
 	<description>Demo project for Spring Boot</description>
 	<properties>
@@ -43,34 +44,14 @@
 	</dependencies>
 
 	<build>
+		
 		<plugins>
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-war-plugin</artifactId>
-				<executions>
-					<execution>
-						<id>default-war</id>
-						<phase>none</phase>
-					</execution>
-					<execution>
-						<id>war-exploded</id>
-						<configuration>
-							<webappDirectory>target/deploy</webappDirectory>
-							<archiveClasses>true</archiveClasses>
-						</configuration>
-						<phase>prepare-package</phase>
-						<goals>
-							<goal>exploded</goal>
-						</goals>
-					</execution>
-				</executions>
-
-			</plugin>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
 		</plugins>
+	
 	</build>
 
 </project>
